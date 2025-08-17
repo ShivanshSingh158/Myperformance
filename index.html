@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="planner-header">
+            <div class="week-info">
+                <h1>Weekly Planner</h1>
+                <div class="week-dates">
+                    <label for="week-input" class="sr-only">Edit week dates</label>
+                    <input type="text" id="week-input" class="week-input" value="August 11 - August 17, 2025" />
+                </div>
+            </div>
+            
+            <div class="day-navigation">
+                <button class="nav-btn nav-btn--prev" id="prev-day" aria-label="Previous day">‹</button>
+                <div class="day-tabs" id="day-tabs">
+                    <button class="day-tab active" data-day="0">Mon</button>
+                    <button class="day-tab" data-day="1">Tue</button>
+                    <button class="day-tab" data-day="2">Wed</button>
+                    <button class="day-tab" data-day="3">Thu</button>
+                    <button class="day-tab" data-day="4">Fri</button>
+                    <button class="day-tab" data-day="5">Sat</button>
+                    <button class="day-tab" data-day="6">Sun</button>
+                </div>
+                <button class="nav-btn nav-btn--next" id="next-day" aria-label="Next day">›</button>
+            </div>
+
+            <div class="day-info" id="day-info">
+                <h2 class="current-day">Monday</h2>
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span>Progress: <span id="progress-text">0/35</span></span>
+                        <button class="btn btn--sm btn--outline" id="clear-day-btn">Clear Day</button>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="planner-main">
+            <div class="slides-container" id="slides-container">
+                <!-- Day slides will be dynamically generated -->
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
